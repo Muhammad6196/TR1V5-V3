@@ -2759,6 +2759,13 @@ function DiscordLib:Window(text)
 					ChannelHolder.CanvasSize = UDim2.new(0,0,0,ChannelHolderLayout.AbsoluteContentSize.Y)
 				end
 				
+				function DropFunc:Refresh(list)
+					DropFunc:Clear()
+
+					table.foreach(list, function(a,b)
+						DropFunc:Add(b)
+					end)
+				end
 				function DropFunc:Add(textadd)
 					itemcount = itemcount + 1
 
